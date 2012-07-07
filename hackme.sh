@@ -1,11 +1,10 @@
 #!/usr/bin/env sh
 
-#	This is script with usefull tips taken from:
-#		https://github.com/mathiasbynens/dotfiles/blob/master/.osx
-#
-#	install it:
-#		curl -sL https://raw.github.com/gist/2108403/hack.sh | sh
-#
+# This is script with usefull tips taken from:
+#   https://github.com/mathiasbynens/dotfiles/blob/master/.osx
+# 
+# install it:
+#   curl -sL https://raw.github.com/mitchmalone/OSX4Hackers/master/hackme.sh | sh
 
 echo "Enable full keyboard access for all controls (e.g. enable Tab in modal dialogs)"
 defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
