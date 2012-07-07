@@ -13,8 +13,8 @@ defaults write NSGlobalDomain AppleKeyboardUIMode -int 3
 echo "Enable subpixel font rendering on non-Apple LCDs"
 defaults write NSGlobalDomain AppleFontSmoothing -int 2
 
-echo "Enable the 2D Dock"
-defaults write com.apple.dock no-glass -bool false
+# echo "Enable the 2D Dock"
+# defaults write com.apple.dock no-glass -bool false
 
 echo "Automatically hide and show the Dock"
 defaults write com.apple.dock autohide -bool true
@@ -25,11 +25,11 @@ defaults write com.apple.dock showhidden -bool true
 echo "Enable iTunes track notifications in the Dock"
 defaults write com.apple.dock itunes-notifications -bool true
 
-echo "Disable menu bar transparency"
-defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
+# echo "Disable menu bar transparency"
+# defaults write NSGlobalDomain AppleEnableMenuBarTransparency -bool false
 
-echo "Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons"
-defaults write com.apple.finder QuitMenuItem -bool true
+# echo "Allow quitting Finder via ⌘ + Q; doing so will also hide desktop icons"
+# defaults write com.apple.finder QuitMenuItem -bool true
 
 echo "Show all filename extensions in Finder"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
@@ -68,33 +68,34 @@ defaults write com.apple.dock show-process-indicators -bool true
 # defaults write com.apple.dock launchanim -bool false
 
 echo "Display ASCII control characters using caret notation in standard text views"
-# Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`
+echo "Try e.g. `cd /tmp; unidecode "\x{0000}" > cc.txt; open -e cc.txt`"
 defaults write NSGlobalDomain NSTextShowsControlCharacters -bool true
 
 echo "Disable press-and-hold for keys in favor of key repeat"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 
-echo "Set a blazingly fast keyboard repeat rate"
-defaults write NSGlobalDomain KeyRepeat -int 0.02
+# Comment: these values need a tweek, they are too fast
+# echo "Set a blazingly fast keyboard repeat rate"
+# defaults write NSGlobalDomain KeyRepeat -int 0.02
 
-echo "Set a shorter Delay until key repeat"
-defaults write NSGlobalDomain InitialKeyRepeat -int 12
+# echo "Set a shorter Delay until key repeat"
+# defaults write NSGlobalDomain InitialKeyRepeat -int 12
 
-echo "Disable auto-correct"
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+# echo "Disable auto-correct"
+# defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
 echo "Enable AirDrop over Ethernet and on unsupported Macs running Lion"
 defaults write com.apple.NetworkBrowser BrowseAllInterfaces -bool true
 
-echo "Disable disk image verification"
-defaults write com.apple.frameworks.diskimages skip-verify -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
-defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
+# echo "Disable disk image verification"
+# defaults write com.apple.frameworks.diskimages skip-verify -bool true
+# defaults write com.apple.frameworks.diskimages skip-verify-locked -bool true
+# defaults write com.apple.frameworks.diskimages skip-verify-remote -bool true
 
-echo "Automatically open a new Finder window when a volume is mounted"
-defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
-defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
-defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+# echo "Automatically open a new Finder window when a volume is mounted"
+# defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
+# defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
+# defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
 
 echo "Display full POSIX path as Finder window title"
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
@@ -111,15 +112,15 @@ defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 echo "Show item info below desktop icons"
 /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:showItemInfo true" ~/Library/Preferences/com.apple.finder.plist
 
-echo "Enable snap-to-grid for desktop icons"
-/usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
+# echo "Enable snap-to-grid for desktop icons"
+# /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 echo "Disable the warning before emptying the Trash"
 defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
-echo "Require password immediately after sleep or screen saver begins"
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
+# echo "Require password immediately after sleep or screen saver begins"
+# defaults write com.apple.screensaver askForPassword -int 1
+# defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 echo "Enable tap to click (Trackpad)"
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
